@@ -264,3 +264,16 @@ nat_gw = client.create_nat_gateway(SubnetId=subnet1.id,AllocationId=c)
 eipalloc-1991c77c
 # Now assign allocation_id as AllocationId
 nat_gw = client.create_nat_gateway(SubnetId=subnet1.id,AllocationId=allocation_id)
+
+### How to Tag Instances
+
+>>> instance_iterator = list(ec2.instances.all())
+>>> print instance_iterator
+[ec2.Instance(id='i-097cdfbf0f0c116f7')]
+>>> instance_iterator = list(ec2.instances.all())[0]
+>>> print instance_iterator
+ec2.Instance(id='i-097cdfbf0f0c116f7')
+>>> print instance_iterator.id
+i-097cdfbf0f0c116f7
+>>> 
+
